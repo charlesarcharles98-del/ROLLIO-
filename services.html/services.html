@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Services</title>
+  <link rel="stylesheet" href="style.css">
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html, body{
+  width:100%;
+  overflow-x:hidden;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+
+  background:
+  radial-gradient(circle at top left,
+  rgba(128,0,255,.25),
+  transparent 30%),
+
+  radial-gradient(circle at bottom right,
+  rgba(0,180,255,.20),
+  transparent 30%),
+
+  #0f0f1a;
+
+  color:white;
+  min-height:100vh;
+}
+
+/* NAVBAR */
+
+nav{
+  width:100%;
+  padding:20px 8%;
+
+  display:flex;
+  justify-content:center;
+  gap:40px;
+
+  background:rgba(255,255,255,.05);
+
+  backdrop-filter:blur(10px);
+
+  position:sticky;
+  top:0;
+
+  z-index:1000;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:#b266ff;
+}
+
+/* HERO */
+
+.hero{
+  text-align:center;
+  padding:80px 20px 40px;
+}
+
+.hero h1{
+  font-size:55px;
+  margin-bottom:15px;
+}
+
+.hero p{
+  color:#d0d0d0;
+  font-size:18px;
+}
+
+/* SERVICES GRID */
+
+.services-container{
+
+  width:100%;
+  max-width:1200px;
+
+  margin:0 auto;
+
+  padding:40px 20px 80px;
+
+  display:grid;
+
+  grid-template-columns:repeat(3, 1fr);
+
+  gap:30px;
+}
+
+/* CARD */
+
+.card{
+
+  background:rgba(255,255,255,.05);
+
+  border:1px solid rgba(255,255,255,.08);
+
+  border-radius:25px;
+
+  overflow:hidden;
+
+  transition:.4s;
+
+  backdrop-filter:blur(10px);
+
+  min-height:420px;
+
+  width:100%;
+
+  box-shadow:
+  0 0 15px rgba(128,0,255,.10);
+}
+
+.card:hover{
+
+  transform:translateY(-10px);
+
+  box-shadow:
+  0 0 25px rgba(128,0,255,.35),
+  0 0 45px rgba(0,180,255,.20);
+}
+
+/* IMAGE */
+
+.card img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+}
+
+/* CONTENT */
+
+.card-content{
+  padding:25px;
+}
+
+.card h2{
+  font-size:26px;
+  margin-bottom:10px;
+}
+
+.card p{
+  color:#d5d5d5;
+  font-size:16px;
+  line-height:1.6;
+  margin-bottom:20px;
+}
+
+/* BUTTON */
+
+.card button{
+
+  width:100%;
+  padding:12px;
+
+  border:none;
+  border-radius:12px;
+
+  background:linear-gradient(45deg,#7b2cff,#00bfff);
+
+  color:white;
+
+  font-size:16px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.card button:hover{
+  transform:scale(1.04);
+}
+
+/* POPUP */
+
+.popup{
+
+  position:fixed;
+  top:50%;
+  left:50%;
+
+  transform:translate(-50%,-50%);
+
+  background:#1a1a2e;
+
+  padding:30px;
+
+  border-radius:20px;
+
+  text-align:center;
+
+  box-shadow:0 0 30px rgba(128,0,255,.4);
+
+  display:none;
+
+  z-index:2000;
+}
+
+.popup h3{
+  margin-bottom:10px;
+}
+
+.popup button{
+  margin-top:15px;
+  padding:10px 20px;
+
+  border:none;
+  border-radius:10px;
+
+  background:#7b2cff;
+
+  color:white;
+
+  cursor:pointer;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+  .services-container{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .services-container{
+    grid-template-columns:1fr;
+  }
+}
+
+</style>
+
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">À propos</  </nav>
+
+  <!-- TITRE -->
+  <section class="hero">
+    <h1>Nos Services</h1>
+    <p>Découvrez nos meilleures offres touristiques.</p>
+  </section>
+
+  <!-- SERVICES -->
+  <div class="services-container">
+
+    <div class="card">
+      <h2>Visite touristique</h2>
+      <p>Découvrez les plus beaux lieux historiques.</p>
+      <button onclick="reserver('Visite touristique')">
+        Réserver
+      </button>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 18 CARDS DESTINATIONS -->
+
+<div class="card">
+  <img src="images/louvre.jpg">
+  <div class="card-content">
+    <h2>Musée du Louvre</h2>
+    <p>Découvrez l’un des musées les plus célèbres du monde.</p>
+    <button onclick="reserver('Musée du Louvre')">Réserver</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/eiffel.jpg">
+  <div class="card-content">
+    <h2>Tour Eiffel</h2>
+    <p>Visitez le monument emblématique de Paris.</p>
+    <button onclick="reserver('Tour Eiffel')">Réserver</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/agou.jpg">
+  <div class="card-content">
+    <h2>Pic d’Agou</h2>
+    <p>Découvrez le plus haut sommet du Togo.</p>
+    <button onclick="reserver('Pic d’Agou')">Réserver</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/esclaves.jpg">
+  <div class="card-content">
+    <h2>Maison des Esclaves</h2>
+    <p>Un lieu historique chargé d’émotion.</p>
+    <button onclick="reserver('Maison des Esclaves')">Réserver</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/gizeh.jpg">
+  <div class="card-content">
+    <h2>Pyramides de Gizeh</h2>
+    <p>Explorez les merveilles de l’Égypte antique.</p>
+    <button onclick="reserver('Pyramides de Gizeh')">Réserver</button>
+  </div>
+</div>
+
+<div class="card">
+  <img src="images/triomphe.jpg">
+  <div class="card-content">
+    <h2>Arc de Triomphe</h2>
+    <p>Découvrez un symbole historique de Paris.</p>
+    <button onclick="reserver('Arc de Triomphe')">Réserver</button>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- ===== LES 7 MERVEILLES DU MONDE ===== -->
+
+<!-- GRANDE MURAILLE DE CHINE -->
+
+<div class="card">
+  <img src="images/muraille.jpg">
+  <div class="card-content">
+    <h2>Grande Muraille de Chine</h2>
+    <p>Explorez l’immense muraille historique de Chine.</p>
+    <button onclick="reserver('Grande Muraille de Chine')">
+      Réserver
+    </button>
+  </div>
+</div>
+
+<!-- PETRA -->
+
+<div class="card">
+  <img src="images/petra.jpg">
+  <div class="card-content">
+    <h2>Pétra</h2>
+    <p>Découvrez la célèbre cité antique creusée dans la roche.</p>
+    <button onclick="reserver('Pétra')">
+      Réserver
+    </button>
+  </div>
+</div>
+
+<!-- CHRIST REDEMPTEUR -->
+
+<div class="card">
+  <img src="images/christ.jpg">
+  <div class="card-content">
+    <h2>Christ Rédempteur</h2>
+    <p>Admirez la célèbre statue géante du Brésil.</p>
+    <button onclick="reserver('Christ Rédempteur')">
+      Réserver
+    </button>
+  </div>
+</div>
+
+<!-- MACHU PICCHU -->
+
+<div class="card">
+  <img src="images/machu.jpg">
+  <div class="card-content">
+    <h2>Machu Picchu</h2>
+    <p>Découvrez la mystérieuse cité des Incas.</p>
+    <button onclick="reserver('Machu Picchu')">
+      Réserver
+    </button>
+  </div>
+</div>
+
+<!-- CHICHEN ITZA -->
+
+<div class="card">
+  <img src="images/chichen.jpg">
+  <div class="card-content">
+    <h2>Chichén Itzá</h2>
+    <p>Visitez les incroyables ruines mayas du Mexique.</p>
+    <button onclick="reserver('Chichén Itzá')">
+      Réserver
+    </button>
+  </div>
+</div>
+
+<!-- COLOSSEE -->
+
+<div class="card">
+  <img src="images/colisee.jpg">
+  <div class="card-content">
+    <h2>Colisée</h2>
+    <p>Explorez le mythique amphithéâtre romain.</p>
+    <button onclick="reserver('Colisée')">
+      Réserver
+    </button>
+  </div>
+</div>
+
+<!-- TAJ MAHAL -->
+
+<div class="card">
+  <img src="images/tajmahal.jpg">
+  <div class="card-content">
+    <h2>Taj Mahal</h2>
+    <p>Admirez le magnifique joyau architectural de l’Inde.</p>
+    <button onclick="reserver('Taj Mahal')">
+      Réserver
+    </button>
+  </div>
+</div>
+
+
+
+
+
+
+    <div class="card">
+      <h2>Guide privé</h2>
+      <p>Un guide personnel pour une meilleure expérience.</p>
+      <button onclick="reserver('Guide privé')">
+        Réserver
+      </button>
+    </div>
+
+    <div class="card">
+      <h2>Pack Premium</h2>
+      <p>Une aventure complète avec services VIP.</p>
+      <button onclick="reserver('Pack Premium')">
+        Réserver
+      </button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+

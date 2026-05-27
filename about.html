@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> À propos de Rollio</title>
+
+  <!-- GOOGLE FONT -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+
+      background:
+      radial-gradient(circle at top left,
+      rgba(128,0,255,.25),
+      transparent 30%),
+
+      radial-gradient(circle at bottom right,
+      rgba(0,180,255,.20),
+      transparent 30%),
+
+      #0f0f1a;
+
+      color:white;
+
+      min-height:100vh;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      width:100%;
+      padding:20px 8%;
+      display:flex;
+      justify-content:center;
+      gap:40px;
+
+      background:rgba(255,255,255,.05);
+
+      backdrop-filter:blur(10px);
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      transition:.3s;
+      font-weight:500;
+    }
+
+    nav a:hover{
+      color:#b266ff;
+    }
+
+    /* HERO */
+
+    .hero{
+      text-align:center;
+      padding:90px 20px 50px;
+    }
+
+    .hero h1{
+      font-size:60px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      max-width:800px;
+      margin:auto;
+
+      line-height:1.8;
+
+      color:#d0d0d0;
+
+      font-size:18px;
+    }
+
+    /* SECTION */
+
+    .about-container{
+      width:100%;
+      padding:50px 8% 80px;
+
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+      gap:35px;
+    }
+
+    /* CARDS */
+
+    .about-card{
+
+      background:rgba(255,255,255,.05);
+
+      border:1px solid rgba(255,255,255,.08);
+
+      border-radius:25px;
+
+      padding:35px;
+
+      transition:.4s;
+
+      backdrop-filter:blur(10px);
+
+      box-shadow:
+      0 0 20px rgba(128,0,255,.10);
+
+    }
+
+    .about-card:hover{
+
+      transform:translateY(-8px);
+
+      box-shadow:
+      0 0 30px rgba(128,0,255,.30);
+
+    }
+
+    .about-card h2{
+      margin-bottom:15px;
+      font-size:28px;
+    }
+
+    .about-card p{
+      color:#d5d5d5;
+      line-height:1.8;
+      font-size:16px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      text-align:center;
+      padding:30px;
+
+      background:rgba(255,255,255,.03);
+
+      color:#aaa;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <a href="index.html">Accueil</a>
+
+    
+
+    <a href="about.html">À propos</a>
+
+    <a href="serv.html">Services</a>
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <h1>À propos de ROLLIO</h1>
+
+    <p>
+      ROLLIO est une agence touristique virtuelle créée pour faire découvrir
+      les plus beaux lieux du monde à travers une expérience moderne,
+      immersive et élégante.
+    </p>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="about-container">
+
+    <div class="about-card">
+
+      <h2>Notre Mission</h2>
+
+      <p>
+        Permettre aux visiteurs d’explorer les plus grandes merveilles du monde
+        grâce à une plateforme touristique moderne et interactive.
+      </p>
+
+    </div>
+
+    <div class="about-card">
+
+      <h2> Nos Destinations</h2>
+
+      <p>
+        Des pyramides au togo, en Afrique comme partout dans le monde au Machu Picchu,
+         propose des destinations célèbres et historiques
+        à travers plusieurs continents.
+      </p>
+
+    </div>
+
+    <div class="about-card">
+
+      <h2> Expérience Premium</h2>
+
+      <p>
+        Notre objectif est d’offrir une expérience élégante,
+        fluide et immersive avec un design moderne
+        et des réservations simples.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Rollio- Tous droits réservés
+  </footer>
+
+</body>
+</html>

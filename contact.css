@@ -1,0 +1,71 @@
+
+
+
+
+body {
+  font-family: Poppins, sans-serif;
+  background: #0b1023;
+  color: white;
+}
+
+
+
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 20px 50px;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.logo-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid gold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+
+section {
+ align-items: center;
+ text-align: center;
+ background-color: rgb(218, 176, 103);
+ height: 500px;
+ border-radius: 30px;
+
+}
+textarea{
+
+    align-items: center;
+
+
+
+}
+
+button{
+
+ border: 2px solid rgb(43, 19, 165);
+background-color: rgb(21, 62, 87);
+}
